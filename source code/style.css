@@ -1,0 +1,185 @@
+body {
+    background-color:rgba(255, 255, 255, 0.493);
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d12533;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: #d0112b;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #d0112b;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  .font{
+    font-family: 'Quicksand', sans-serif;
+    font-size:medium;
+    color: rgba(255, 255, 255, 0.555);
+  }
+  
+  .fonth{
+    font-family: 'Quicksand', sans-serif;
+    font-size:large;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.664);
+    text-shadow:2px 2px 6px #000000;
+  
+  }
+  .fsize{
+    font-size:medium;
+  }
+
+  
+  .bgf{
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 20px;
+    padding: 20px;
+    }
+    
+  .bg{
+    background-color:rgba(255, 255, 255, 0.493);
+    }
+  
+    .fcolor{
+      color: red;
+    }
+  
+   .btn{
+      background-color:white;
+      font-weight: bold;
+      }
+    .btn.btn2{
+        background-color: rgba(255, 41, 41, 0.616);
+        font-weight: bold;
+        color: white;
+        }
+    
+    input.invalid{
+      border-width: 2.5px;
+      border-color: rgb(255, 0, 0);
+      } 
+  
+    input:valid{
+      border-width: 2.5px;
+      border-color: rgb(160, 255, 18);
+        }      
+      
+   
+    select:valid{
+      border-width: 2.5px;
+      border-color: rgb(160, 255, 18);
+  
+    }
+  
+    select.invalid {
+      border-width: 2.5px;
+      border-color: red; 
+    }
+  
+    .scrool_table {
+      overflow:hidden;
+      overflow-y: scroll;
+      height:400px;
+  }
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #4b4848; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(27, 27, 27); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.562); 
+  }
+  
+  .table_wrapper{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;}
+
+    form {
+      padding-left: 25%;
+      display: inline-block;
+  }
+
+  
+  .container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Add-New-Product update"
+      "Add-New-Product  delete";}
+
+      .Add-New-Product {
+        grid-area: Add-New-Product;
+      }
+      .update{
+        grid-area:update;
+
+      }
+      .delete{
+        grid-area:delete;
+
+      }
+.container2
+{
+    height: 75%;
+    width: 50%;
+    background-color:rgb(223, 223, 223);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="customization.css">
+
+</head>
+<body class="bg">
+   
+    <ul>
+ <li style="background-color:rgb(223, 223, 223)"><a href="user_all.py?usr={}" style="color:red; font-family:Papyrus,Fantasy"">YMS</a></li>
+            <li><a href="user_newreleases.py?usr={}">New Releases</a></li>
+            <li>
+            <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+             <a href="user_all.py?usr={}">All</a>
+             <a href="user_clothes.py?usr={}">Clothes</a>
+             <a href="user_glassware.py?usr={}">Glassware</a>
+             <a href="user_bag.py?usr={}">Bag</a>
+             <a href="user_accessories.py?usr={}">Accessories</a>
+            </div>
+            </div>
+            </li>
+            <li style="float:right"><a href="visitor.py">LogOut</a></li>
+            <li style="float:right"><a href="account.py?usr={}">Account</a></li>
+            <li style="float:right"><a href="user_cart.py?usr={}">Shopping cart</a></li>
+            </ul>
+      </ul>
+
+
+  <div class="container">
+    
+<div class="font bgf " >
+    <h1 style="font: size 500px ;"> Customization Form</h1>
+   <br><br>
+    <form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    
+      <input type="hidden" name="productId" [value]="service.formData.productId" />
+      
+      <div class="form-group">
+        <label class="label">Description</label><br>
+        <input required [class.invalid]="t_description.invalid && t_description.touched" class="form-control form-control-lg "
+        placeholder="Customization Description" name="t_description" #t_description="ngModel" [(ngModel)]= "service.formData.t_description">
+    </div><br>
+    <strong>Picture:</strong>
+    <br> <br>
+    <div class="form-group">
+        <label class="label">Picture Link</label><br>
+        <input required [class.invalid]="product_image_file.invalid && product_image_file.touched" class="form-control form-control-lg "
+        placeholder="Image Link " name="product_image_file" #product_image_file="ngModel" [(ngModel)]= "service.formData.product_image_file">
+    </div><br>
+    <strong>Text:</strong>
+    <br> <br>
+    <div class="form-group">
+        <label class="label">Enter Text To Be Printed</label><br>
+        <input required [class.invalid]="text.invalid && text.touched" class="form-control form-control-lg "
+        placeholder="text " name="text" #text="ngModel" [(ngModel)]= "service.formData.text">
+    </div><br>
+
+    <div class="form-group">
+        <label class="label">Enter Size</label><br>
+        <input required [class.invalid]="t_size.invalid && t_size.touched" class="form-control form-control-lg "
+        placeholder="size " name="t_size" #t_size="ngModel" [(ngModel)]= "service.formData.t_size">
+    </div><br>
+
+
+    <div class="form-group">
+        <label class="label">Enter Text Font</label><br>
+        <input required [class.invalid]="font.invalid && font.touched" class="form-control form-control-lg "
+        placeholder="font " name="font" #font="ngModel" [(ngModel)]= "service.formData.font">
+    </div><br>
+
+    <div class="form-group">
+        <label class="label">Enter Text Color</label><br>
+        <input required [class.invalid]="t_color.invalid && t_color.touched" class="form-control form-control-lg "
+        placeholder="font " name="t_color" #t_color="ngModel" [(ngModel)]= "service.formData.t_color">
+    </div><br>
+
+    <div class="form-group">
+        <button class="btn btn-info btn-lg fcolor btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
+
+    </form><br><br></div>
+
+  
+  
+</div>
+      
+</body>
+</html>
